@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "npm run build && wrangler dev",
     "clean": "rm -rf dist",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "@eslint/js": "^10.0.1",
@@ -21,7 +22,9 @@
     "vite-plugin-pwa": "^1.2.0"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.37.2",
     "@types/node": "^22.14.0",
-    "typescript": "~5.8.2"
+    "typescript": "~5.8.2",
+    "wrangler": "^4.93.0"
   }
 }
