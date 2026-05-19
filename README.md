@@ -49,5 +49,5 @@ Optional environment variables:
 
 Notes:
 
-- The app uses hash-based routing, and `public/_redirects` is included for safe static hosting behavior.
+- The app uses hash-based routing, so no SPA rewrite rule is required on Cloudflare Pages.
 - PWA assets are emitted during the Vite build.
