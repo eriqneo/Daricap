@@ -1,20 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# DariCap Network
 
-# Run and deploy your AI Studio app
+DariCap Network is a mobile-first microfinance web app for client registration, loan processing, repayment tracking, and portfolio reporting.
 
-This contains everything you need to run your app locally.
+## Local Development
 
-View your app in AI Studio: https://ai.studio/apps/aaf8d4bc-ef6b-44d5-839a-3edfcb12b756
+Prerequisites: Node.js 18+ and npm.
 
-## Run Locally
+1. Install dependencies with `npm install`
+2. Copy `.env.example` to `.env.local`
+3. Update the environment values you need
+4. Start the dev server with `npm run dev`
 
-**Prerequisites:**  Node.js
+## Build
 
+Create a production build with:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+`npm run build`
+
+The output is generated in `dist/`.
+
+## GitHub
+
+The Git remote for this project is:
+
+`https://github.com/eriqneo/Daricap.git`
+
+Typical push flow:
+
+1. `git add .`
+2. `git commit -m "Prepare project for GitHub and Cloudflare deployment"`
+3. `git push -u origin main`
+
+## Cloudflare Pages
+
+This repo is ready for Cloudflare Pages as a static Vite deployment.
+
+Use these settings in Cloudflare Pages:
+
+- Framework preset: `Vite`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: `/`
+
+Optional environment variables:
+
+- `GEMINI_API_KEY`
+- `VITE_PB_URL`
+
+Notes:
+
+- The app uses hash-based routing, and `public/_redirects` is included for safe static hosting behavior.
+- PWA assets are emitted during the Vite build.

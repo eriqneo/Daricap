@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="DariCap icon">
+  <rect width="192" height="192" rx="40" fill="#1A4B8C"/>
+  <rect x="22" y="22" width="148" height="148" rx="28" fill="#163E73"/>
+  <circle cx="96" cy="72" r="24" fill="#F4F7FC"/>
+  <path d="M55 124c7-20 24-32 41-32s34 12 41 32" fill="none" stroke="#F4F7FC" stroke-width="14" stroke-linecap="round"/>
+  <path d="M135 51l11 11-23 23-11-11z" fill="#8FD3FF"/>
+  <path d="M104 74l14 14" fill="none" stroke="#8FD3FF" stroke-width="8" stroke-linecap="round"/>
+</svg>
