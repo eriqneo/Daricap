@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DariCap Network</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1A4B8C" />
+    <meta name="description" content="DariCap Network - Microfinance Field App" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Layout Container -->
+      <div class="layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+          
+          <!-- Logo area -->
+          <div class="sidebar-brand">
+            <div class="sidebar-logo-mark" id="sidebar-logo-img">
+              <span id="sidebar-monogram">DN</span>
+            </div>
+            <div class="sidebar-brand-text">
+              <span class="sidebar-brand-name" id="sidebar-co-name">DariCap</span>
+              <span class="sidebar-brand-sub" id="sidebar-co-sub">Network</span>
+            </div>
+          </div>
+          
+          <!-- Nav section 1 -->
+          <nav class="sidebar-nav">
+            <span class="nav-section-label">Operations</span>
+            
+            <a href="#/dashboard" class="nav-item" data-route="dashboard">
+              <span class="nav-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </span>
+              <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="#/clients" class="nav-item" data-route="clients">
+              <span class="nav-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </span>
+              <span class="nav-label">Clients</span>
+            </a>
+            <a href="#/repayments" class="nav-item" data-route="repayments">
+              <span class="nav-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </span>
+              <span class="nav-label">Repayments</span>
+            </a>
+            <a href="#/reports" class="nav-item" data-route="reports">
+              <span class="nav-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+              </span>
+              <span class="nav-label">Reports</span>
+            </a>
+            
+            <!-- Divider -->
+            <div class="nav-divider"></div>
+            <span class="nav-section-label">Portal</span>
+            
+            <a href="#/loans" class="nav-item" data-route="loans">
+              <span class="nav-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </span>
+              <span class="nav-label">Loan Applications</span>
+              <span class="nav-pending-badge" id="nav-pending-badge" style="display:none">0</span>
+            </a>
+            
+            <a href="#/settings" class="nav-item admin-only" data-route="settings">
+              <span class="nav-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </span>
+              <span class="nav-label">Settings</span>
+            </a>
+          </nav>
+          
+          <!-- Spacer -->
+          <div style="flex: 1;"></div>
+          
+          <!-- Bottom user section -->
+          <div class="sidebar-bottom">
+            <div class="sidebar-user-info" id="sidebar-user-info">
+              <div class="sidebar-user-avatar" id="sidebar-user-avatar">DN</div>
+              <div class="sidebar-user-text">
+                <span class="sidebar-user-name" id="sidebar-user-name">User Name</span>
+                <span class="sidebar-user-role" id="sidebar-user-role">Role</span>
+              </div>
+              <div class="sidebar-user-arrow">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M6 4l4 4-4 4" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+            
+            <button class="sidebar-signout-btn" id="signout-btn" data-action="signout">
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+                <path d="M6 2H3a1 1 0 00-1 1v10a1 1 0 001 1h3M11 5l3 3-3 3M14 8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              Sign out
+            </button>
+          </div>
+          
+        </aside>
+
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <!-- Main Content -->
+        <main class="main-container">
+          <header class="topbar">
+            <button class="ham-btn" id="ham-btn" style="display: none;">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div style="display: flex; align-items: center; flex: 1;">
+              <div class="topbar-title" id="page-title">Dashboard</div>
+              <div id="topbar-pending-container"></div>
+            </div>
+            <div id="online-status" class="system-status online">
+              <div class="status-dot online"></div>
+              <span id="status-text">System Online</span>
+            </div>
+            <div class="topbar-right">
+              <div class="notif-btn" id="notif-bell">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 01-3.46 0"></path></svg>
+                <div class="notif-badge" id="notif-count" style="display: none;">0</div>
+              </div>
+              <div class="topbar-user">
+                <div class="topbar-avatar" id="topbar-avatar-display">JD</div>
+                <div class="topbar-username" id="topbar-username-display">Jane D.</div>
+                <svg class="topbar-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+          </header>
+
+          <div id="router-view" class="view-content">
+            <!-- Dynamic content will be injected here -->
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #64748B;">
+              Initializing secure session...
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

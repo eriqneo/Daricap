@@ -1,0 +1,6 @@
+{
+  "name": "DariCap Network",
+  "description": "A Kenyan microfinance Progressive Web App for field officers, featuring offline support and cloud sync.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}

@@ -1,0 +1,27 @@
+{
+  "name": "daricap-network",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@eslint/js": "^10.0.1",
+    "@google/genai": "^1.29.0",
+    "dotenv": "^17.2.3",
+    "eslint": "^10.2.1",
+    "idb-keyval": "^6.2.2",
+    "pocketbase": "^0.26.8",
+    "vite": "^6.2.0",
+    "vite-plugin-pwa": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "~5.8.2"
+  }
+}
